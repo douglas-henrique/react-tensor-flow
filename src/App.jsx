@@ -21,12 +21,12 @@ const CarCounter = () => {
     loadModel();
   }, []);
 
-  const handleVideoUpload = (event) => {
-    const file = event.target.files[0];
-    const video = videoRef.current;
-    video.src = URL.createObjectURL(file);
-    video.play();
-  };
+  // const handleVideoUpload = (event) => {
+  //   const file = event.target.files[0];
+  //   const video = videoRef.current;
+  //   video.src = URL.createObjectURL(file);
+  //   video.play();
+  // };
 
   const hasCrossedLine = (car) => {
     const lineY = canvasRef.current.height / 2; // Linha de contagem no meio do vídeo
@@ -161,9 +161,9 @@ const CarCounter = () => {
         <div className="flex flex-row gap-5 p-10">
           <div className='p-10 flex flex-col gap-5'>
             <h1 className="text-2xl font-bold">Cars counter</h1>
-            <input type="file" onChange={handleVideoUpload} accept="video/mp4" />
+            {/* <input type="file" onChange={handleVideoUpload} accept="video/mp4" /> */}
             <label>Orignal video </label>
-            <video ref={videoRef} width="640" height="480" controls onPlay={runDetection} />
+            <video ref={videoRef} src="cars.mp4" width="640" height="480" controls onPlay={runDetection} />
           </div>
           <div>
             <label>Detected cars: <span>{carCount}</span></label>
