@@ -1,15 +1,17 @@
 # react-tensor-flow
 
-About
+## About
 
 React application using tensor flow to recognize cars in a roadway
 
-## How to install 
+### How to install 
 In your terminal, run the following commands 
 
 ```bash
 	yarn install 
 ```
+
+and
 
 ```bash
 	yarn dev 
